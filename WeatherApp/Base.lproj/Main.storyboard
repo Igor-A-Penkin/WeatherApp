@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-c4-ewb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-N4-36H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-XL-7hx">
+                                <rect key="frame" x="32" y="402" width="351" height="93"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPERATURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Not-9T-t4z">
+                                <rect key="frame" x="89" y="503" width="236" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8iy-c4-ewb" firstAttribute="trailing" secondItem="Ix3-N4-36H" secondAttribute="trailing" id="6qO-Hr-IaW"/>
+                            <constraint firstItem="Waf-XL-7hx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="7cj-IU-BkC"/>
+                            <constraint firstItem="Ix3-N4-36H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="85Q-JY-KEm"/>
+                            <constraint firstItem="Ix3-N4-36H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EYc-Iu-Pwp"/>
+                            <constraint firstItem="8iy-c4-ewb" firstAttribute="top" secondItem="Ix3-N4-36H" secondAttribute="top" id="JWE-Be-Xqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Not-9T-t4z" secondAttribute="bottom" constant="335" id="N6d-DK-xSt"/>
+                            <constraint firstItem="Not-9T-t4z" firstAttribute="top" secondItem="Waf-XL-7hx" secondAttribute="bottom" constant="8" id="SAa-m7-UhW"/>
+                            <constraint firstItem="Ix3-N4-36H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wex-y3-sRI"/>
+                            <constraint firstItem="Not-9T-t4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="aYb-UU-Boo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8iy-c4-ewb" secondAttribute="bottom" constant="-34" id="gB4-Vf-kXD"/>
+                            <constraint firstItem="8iy-c4-ewb" firstAttribute="leading" secondItem="Ix3-N4-36H" secondAttribute="leading" id="gRX-ES-ZGz"/>
+                            <constraint firstItem="Waf-XL-7hx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rsN-D7-wrO"/>
+                            <constraint firstItem="Not-9T-t4z" firstAttribute="centerX" secondItem="Waf-XL-7hx" secondAttribute="centerX" id="syS-La-Jct"/>
+                            <constraint firstItem="Waf-XL-7hx" firstAttribute="centerX" secondItem="Ix3-N4-36H" secondAttribute="centerX" id="zZp-2d-Nt9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Waf-XL-7hx" secondAttribute="bottom" constant="367" id="zqn-Ik-jbA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="Waf-XL-7hx" id="WM6-bO-hRb"/>
+                        <outlet property="searchBar" destination="Ix3-N4-36H" id="uuu-5v-4yt"/>
+                        <outlet property="temperatureLabel" destination="Not-9T-t4z" id="KbZ-Aq-8oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather" width="900" height="1600"/>
+    </resources>
+</document>
